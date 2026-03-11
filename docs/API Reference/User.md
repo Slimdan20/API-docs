@@ -209,7 +209,7 @@ curl -X POST https://fakestoreapi.com/users \
 
 - The API does not require a request body and returns `201 Created` when absent.
 
-- Where request body contains invalid JSON, the API returns a `400 Bad Request` error.
+- Where the request body contains invalid JSON, the API returns a `400 Bad Request` error.
 
 ## PUT `/users/{id}`
 
@@ -274,15 +274,15 @@ The API returns an error response when non-integers are placed in the `{id}` fie
 
 ### Edge cases
 
-- The request body is not enforced by the API
+- The request body is not enforced by the API.
 
 - The API response mirrors the JSON-formatted request.
 
-- An empty request body returns a `200 OK` status
+- An empty request body returns a `200 OK` status.
 
 ## DELETE `/users/{id}`
 
-Removes users data from Fake Store Api
+Removes users' data from Fake Store Api
 
 ### Make request
 
@@ -298,7 +298,7 @@ Removes users data from Fake Store Api
 curl -X DELETE https://fakestoreapi.com/users/{id}
 ```
 
-Input a valid ID to make request:
+Input a valid ID to make a request:
 
 ```bash
 curl -X DELETE https://fakestoreapi.com/users/2

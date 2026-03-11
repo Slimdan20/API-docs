@@ -39,7 +39,7 @@ All interactions with Fake Store API resources are carried out using standard HT
 
 While the Fake Store API does not require authentication for basic data retrieval, it provides an authentication endpoint (`/auth/login`) for validating user credentials.
 
-Authentication request to the API is securely validated as it checks and only returns a JSON Web Token (JWT) when request credentials are accurate and/or properly formatted.
+The authentication request to the API is securely validated, as it checks and only returns a JSON Web Token (JWT) when request credentials are accurate and/or properly formatted.
 
 ```bash
 curl -X POST https://fakestoreapi.com/auth/login \
@@ -56,7 +56,7 @@ curl -X POST https://fakestoreapi.com/auth/login \
 
 Every request to the Fake Store API must specify a valid endpoint and HTTP method.
 
-For requests that create a new resource, or updates an existing one, the API typically accepts a JSON-formatted request body. Such requests should include a valid header formatted as `Content-Type: application/json`. 
+For requests that create a new resource or update an existing one, the API typically accepts a JSON-formatted request body. Such requests should include a valid header formatted as `Content-Type: application/json`. 
 
 ```
 curl -X POST https://fakestoreapi.com/products \
@@ -68,7 +68,7 @@ In the request above:
 
 - `"Content-Type: application/json"` represents the request Header.
 
-- `'{"title":"Sample Product","price":100}'` represents the JSON formatted request body.
+- `'{"title":"Sample Product","price":100}'` represents the JSON-formatted request body.
 
 ## Response Format
 
@@ -82,7 +82,7 @@ The API generally returns JSON-formatted responses for successful API requests. 
 }
 ```
 
-The above code represents a successful JSON-formatted API response returned on successful API call.
+The above code represents a successful JSON-formatted API response returned on a successful API call.
 
 ```text
 username and password are not provided in JSON-format
@@ -92,7 +92,7 @@ The above represents a plain text response returned by the API upon a failed API
 
 ## Status codes
 
-The API returns a status code depending upon request success or failure.
+The API returns a status code depending upon request's success or failure.
 
 | **Status code** | **Description** |
 |---|---|

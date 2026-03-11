@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Products
 
-Get and modify e-commerce products with HTTP methods
+Get and modify e-commerce products with HTTP methods.
 
 ## Product object
 
@@ -65,7 +65,7 @@ curl https://fakestoreapi.com/products
 
 ## GET `/products/{id}`
 
-Retrieves a specific product using its unique ID as an identifier
+Retrieves a specific product using its unique ID as an identifier.
 
 ### Make request
 
@@ -191,7 +191,7 @@ curl -X PUT https://fakestoreapi.com/products/{id} \
 -d '{"title": "Test sample", "price": 800, "category": "jewelry","image": "https://exampleimage.com/img.png"}'
 ```
 
-Replace `{id}` with a valid product ID. 
+Replace `{id}` with a valid product ID:
 
 ```bash
 curl -X PUT https://fakestoreapi.com/products/5 \
@@ -201,7 +201,7 @@ curl -X PUT https://fakestoreapi.com/products/5 \
 
 The Fake Store API does not validate whether a product exists. Hence, it accepts any integer value and returns a successful JSON response.
 
-Decimal values (for example, 7.5) are however coerced into integers before the product is updated.
+Decimal values (for example, 7.5) are, however, coerced into integers before the product is updated.
 
 #### Success response
 

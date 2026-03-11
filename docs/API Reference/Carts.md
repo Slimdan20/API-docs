@@ -72,7 +72,7 @@ curl https://fakestoreapi.com/carts
 
 ## GET `/carts/{id}`
 
-Retrieves a specific cart by ID
+Retrieves a specific cart by ID.
 
 ### Make request
 
@@ -136,7 +136,7 @@ The API returns an error response for non-integer IDs
 
 ## POST `/carts`
 
-Creates a new cart
+Creates a new cart.
 
 ### Make request
 
@@ -157,7 +157,7 @@ Creates a new cart
 }
 ```
 
-The body parameters include a `userId`(integer), and `products`(array). A cart ID is not required in the request body as the API generates an ID itself.
+The body parameters include a `userId`(integer) and `products`(array). A cart ID is not required in the request body as the API generates an ID itself.
 
 #### Request
 
@@ -185,7 +185,7 @@ curl -i -X POST https://fakestoreapi.com/carts \
 
 ## Put `carts/{id}`
 
-Updates an existing cart by ID
+Updates an existing cart by ID.
 
 ### Make request
 
@@ -240,7 +240,7 @@ curl -X PUT https://fakestoreapi.com/carts/5 \
 
 #### Error response
 
-For non-integer IDs, the API returns a JSON-formatted error response
+For non-integer IDs, the API returns a JSON-formatted error response.
 
 - **Status:** `400 Bad Request`
 
@@ -254,7 +254,7 @@ For non-integer IDs, the API returns a JSON-formatted error response
 
 ## DELETE `carts/{id}`
 
-Simulates removal of a specific cart by ID.
+Simulates the removal of a specific cart by ID.
 
 ### Make request
 
@@ -270,7 +270,7 @@ Simulates removal of a specific cart by ID.
 curl -X DELETE https://fakestoreapi.com/carts/{id}
 ```
 
-Input a valid `{id}` to make request:
+Input a valid `{id}` to make a request:
 
 ```bash
 curl -X DELETE https://fakestoreapi.com/carts/5
@@ -294,7 +294,7 @@ Response:
 
 #### Error response
 
-The API returns an error response when a non-integer ID is inputted.
+The API returns an error response when a non-integer ID is input.
 
 - **Status:** `400 Bad Request`
 
