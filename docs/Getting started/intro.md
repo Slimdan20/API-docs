@@ -57,9 +57,9 @@ Represents registered end-users of the e-commerce store.
 
 ## What's next?
 
-- Make your first API call &rarr; [Quickstart guide](http://localhost:3000/docs/Getting%20started/Quick%20start).
+- Make your first API call &rarr; [Quickstart guide](Quick%20start.md).
 
-- Understand API responses &rarr; [Concepts](http://localhost:3000/docs/Concept)
+- Understand API responses &rarr; [Concepts](../Concept.md)
 
-- Integrate the API into a product catalogue page &rarr; [Guide](http://localhost:3000/docs/Guide/Guide-1).
+- Integrate the API into a product catalogue page &rarr; [Guide](../Guide/Guide-1).
 
