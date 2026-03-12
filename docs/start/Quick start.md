@@ -4,11 +4,11 @@ sidebar_position: 2
 
 # Quickstart
 
-Make a request to the Fake Store API and fetch product data.
+In this guide, you will make a request to the Fake Store API and fetch product data.
 
 ## Base URL
 
-All requests to the API are made using the base URL:
+All requests to the API are made using the following URL:
 
 ```http
 https://fakestoreapi.com
@@ -62,11 +62,3 @@ fetch('https://fakestoreapi.com/products')
   .catch(error => console.error(error));
 ```
 
-## What's next?
-
-You have successfully made your first request to the Fake Store API and received JSON data. From here, you can explore other areas of the documentation:
-
-- Make requests to the API using other HTTP methods.
-- Integrate the API into popular frameworks.
-- Visit the API reference page.
-- Explore common use cases.

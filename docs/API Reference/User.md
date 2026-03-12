@@ -8,7 +8,7 @@ Retrieve and modify user records using HTTP methods.
 
 ## User object
 
-Defines the structure of a user resource returned and accepted by the Fake Store API.
+Defines the structure of a user resource returned by the Fake Store API.
 
 ```json
 {
@@ -150,7 +150,7 @@ For non-existing integer IDs, the API returns `200 OK` with a `null` response bo
 
 #### Error response
 
-For non-integer, the API returns a JSON-formatted error response.
+For non-integer IDs, the API returns a JSON-formatted error response.
 
 - **Status:** `400 Bad Request`
 

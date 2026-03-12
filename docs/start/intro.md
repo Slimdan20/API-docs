@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Overview
 
-The Fake Store API is a RESTful public API that allows you to build and test prototypes of functional online stores and e-commerce websites. It provides you access to e-commerce data such as products, categories, users, and orders. The API simulates server-side behaviour, leaving you to focus on UI development and application logic.
+The Fake Store API is a RESTful public API that allows you to build and test prototypes of e-commerce applications. It provides you access to e-commerce data such as products, carts, and users. The API simulates server-side behaviour, leaving you to focus on UI development and application logic.
 
 The Fake Store API does not require a unique key or authentication method for basic data retrieval. Instead, it uses standard HTTP methods and returns JSON-formatted responses.
 
@@ -32,11 +32,13 @@ Represents an item available for purchase in the store.
 - `description`: string
 - `category`: string
 - `image`: string
-- `rating`: object (`rate`: number, `count`: integer)
+- `rating`: object (
+    `rate`: number, 
+    `count`: integer)
 
 ### Carts (`/carts`)
 
-Represents a shopping cart associated with a user and contains a collection of products selected for purchase.
+Represents a shopping cart associated with a user and contains products selected for purchase.
 
 - `id`: integer
 - `userId`: integer
@@ -59,7 +61,7 @@ Represents registered end-users of the e-commerce store.
 
 - Make your first API call &rarr; [Quickstart guide](Quick%20start.md).
 
-- Understand API responses &rarr; [Concepts](../Concept.md)
+- Understand API responses &rarr; [Concepts guide](../Concept.md)
 
 - Integrate the API into a product catalogue page &rarr; [Guide](../Guide/Guide-1).
 

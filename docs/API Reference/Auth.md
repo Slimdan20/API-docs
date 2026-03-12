@@ -6,12 +6,13 @@ sidebar_position: 4
 
 Authenticates users of the store.
 
-## User object
+## Auth object
+
+Represents the authentication token returned after a successful login request.
 
 ```json
 {
-    "username": "string",
-    "password": "string"
+    "token": "string"
 }
 ```
 
@@ -30,14 +31,14 @@ Authenticates users of the store.
 ```json
 {
     "username":"mor_2314",
-    "password":"83r5^_",
+    "password":"83r5^_"
 }
 ```
 
 #### Request
 
 ```bash
-curl -i -X POST https://fakestoreapi.com/auth/login \
+curl -X POST https://fakestoreapi.com/auth/login \
   -H "Content-Type: application/json" \
   -d '{"username":"mor_2314", "password":"83r5^_"}'
 ```
@@ -58,7 +59,7 @@ The endpoint returns a JSON Web Token (JWT) that can be used for authenticated r
 
 #### Error response
 
-The API returns an error response when credentials are missing or invalid.
+The API returns an error when credentials are missing or invalid.
 
 - **Status:** `401 Unauthorized`
 

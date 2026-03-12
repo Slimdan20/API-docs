@@ -19,7 +19,7 @@ Resources in the Fake Store API include:
 
 - Users: Profiles of registered e-commerce customers.
 
-- Auth: Endpoints for managing user authentication
+- Auth: Endpoint used for validating user login credentials.
 
 Each resource is accessed through standard HTTP methods such as `GET`, `POST`, `PUT`, and `DELETE`.
 
@@ -92,12 +92,12 @@ The above represents a plain text response returned by the API upon a failed API
 
 ## Status codes
 
-The API returns a status code depending upon request's success or failure.
+The API returns a status code depending on whether the request succeeds or fails.
 
 | **Status code** | **Description** |
 |---|---|
 | `200 OK` | Request completed successfully | 
 | `201 Created` | Resource created successfully | 
-| `400 Bad Request`| Request contains invalid JSON or non-integer ID | 
+| `400 Bad Request`| Request contains invalid JSON or an invalid ID value | 
 | `401 Unauthorized` | Invalid authentication credentials | 
 

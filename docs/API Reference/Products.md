@@ -8,7 +8,7 @@ Get and modify e-commerce products with HTTP methods.
 
 ## Product object
 
-Defines the structure of a product resource returned and accepted by the API.
+Defines the structure of a product resource returned by the API.
 
 ```json
 {
@@ -17,7 +17,7 @@ Defines the structure of a product resource returned and accepted by the API.
   "price": "number <float>",
   "description": "string",
   "category": "string",
-  "image": "string"
+  "image": "string",
   "rating": {
     "rate": "number <float>",
     "count": "integer"
@@ -37,7 +37,7 @@ Retrieve a list of product data from the Fake Store API.
 
 #### Request:
 
-```http
+```bash
 curl https://fakestoreapi.com/products
 ```
 
@@ -45,7 +45,7 @@ curl https://fakestoreapi.com/products
 
 - **Status:** `200 OK`
 
-- **Content Type:** `application/json`
+- **Content-Type:** `application/json`
 
 ```json
 [
@@ -65,7 +65,7 @@ curl https://fakestoreapi.com/products
 
 ## GET `/products/{id}`
 
-Retrieves a specific product using its unique ID as an identifier.
+Retrieves a specific product by its ID.
 
 ### Make request
 
@@ -91,7 +91,7 @@ curl https://fakestoreapi.com/products/5
 
 - **Status**: `200 OK`
 
-- **Content Type:** `application/json`
+- **Content-Type:** `application/json`
 
 ```json
 {
@@ -107,7 +107,7 @@ curl https://fakestoreapi.com/products/5
 }
 ```
 
-For non-integer and non-existing integer IDs, the API returns 200 OK with an empty response body.
+For non-existing or non-integer IDs, the API returns `200 OK` with an empty response body.
 
 ## POST `/products`
 
@@ -207,7 +207,7 @@ Decimal values (for example, 7.5) are, however, coerced into integers before the
 
 - Status: `200 OK`
 
-- Content Type: `application/json`
+- Content-Type: `application/json`
 
 ```json
 {
@@ -223,7 +223,7 @@ The API response includes the specified product `id` and the fields provided in 
 
 #### Error response
 
-The API returns a JSON-formatted error response when the `id` path parameter is not a valid integer. 
+The API returns a JSON-formatted error when the `id` path parameter is not a valid integer. 
 
 - **Status:** `400 Bad Request`
 
@@ -238,7 +238,7 @@ The API returns a JSON-formatted error response when the `id` path parameter is 
 
 ## DELETE `/products/{id}`
 
-Permanently removes a product from the store by ID.
+Simulates the removal of a product from the store by ID.
 
 ### Make request
 

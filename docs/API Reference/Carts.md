@@ -8,18 +8,19 @@ Retrieve and update user carts with HTTP methods.
 
 ## Cart object
 
-Defines the structure of a cart resource returned and accepted by the API.
+Defines the structure of a cart resource returned by the API and used in requests.
 
 ```json
 {
-
-"userId": "integer",
-
-"products": [{ "productId": "integer", "quantity": "integer"}],
-
-"id": "integer", 
-
-"date": "string" 
+  "id": "integer", 
+  "userId": "integer",
+  "products": [
+    {
+      "productId": "integer", 
+      "quantity": "integer"
+    }
+  ],
+  "date": "string" 
 }
 ```
 
@@ -43,7 +44,7 @@ curl https://fakestoreapi.com/carts
 
 - **Status:** `200 OK`
 
-- **Content Type:** `application/json`
+- **Content-Type:** `application/json`
 
 ```json
 [
@@ -65,8 +66,7 @@ curl https://fakestoreapi.com/carts
         "quantity": 6
       }
     ],
-    "__v": 0
-  },
+  }
 ]
 ```
 
@@ -88,7 +88,7 @@ Retrieves a specific cart by ID.
 curl https://fakestoreapi.com/carts/{id}
 ```
 
-Replace `{id}` with a valid cart ID.
+Replace `{id}` with a valid cart ID:
 
 ```bash
 curl https://fakestoreapi.com/carts/5
@@ -98,7 +98,7 @@ curl https://fakestoreapi.com/carts/5
 
 - **Status:** `200 OK`
 
-- **Content Type:** `application/json`
+- **Content-Type:** `application/json`
 
 ```json
 {
@@ -114,8 +114,7 @@ curl https://fakestoreapi.com/carts/5
       "productId": 8,
       "quantity": 1
     }
-  ],
-  "__v": 0
+  ]
 }
 ```
 
@@ -123,7 +122,7 @@ For non-existing integer IDs, the API returns `200 OK` with a `null` response bo
 
 #### Error response
 
-The API returns an error response for non-integer IDs
+The API returns an error response for non-integer IDs.
 
 **Status:** `400 Bad Request`
 
@@ -162,7 +161,7 @@ The body parameters include a `userId`(integer) and `products`(array). A cart ID
 #### Request
 
 ```bash
-curl -i -X POST https://fakestoreapi.com/carts \
+curl -X POST https://fakestoreapi.com/carts \
   -H "Content-Type: application/json" \
   -d '{"userId":2,"products":[{"productId":7,"quantity":1}]}'
 ```
@@ -178,12 +177,17 @@ curl -i -X POST https://fakestoreapi.com/carts \
   "id": 11,
   "userId": 2,
   "products": [
-    { "productId": 7, "quantity": 1 }
+    { 
+      "productId": 7, 
+      "quantity": 1 
+    }
   ]
 }
 ```
 
-## Put `carts/{id}`
+The API returns the submitted cart data with a generated ID
+
+## PUT `/carts/{id}`
 
 Updates an existing cart by ID.
 
@@ -202,11 +206,16 @@ Updates an existing cart by ID.
 ```json
 {
   "userId":10,
-  "products":[{"productId":3,"quantity":1}]
+  "products":[
+    {
+      "productId":3,
+      "quantity":1
+    }
+  ]
 }
 ```
 
-Where no request body is provided, the API returns `200 OK` with only the cart `id`.
+If no request body is provided, the API returns `200 OK` with only the cart `id`.
 
 #### Request
 
@@ -234,7 +243,12 @@ curl -X PUT https://fakestoreapi.com/carts/5 \
 {
   "id":5,
   "userId":10,
-  "products":[{"productId":3,"quantity":1}]
+  "products":[
+    {
+      "productId":3,
+      "quantity":1
+    }
+  ]
 }
 ```
 
@@ -252,7 +266,7 @@ For non-integer IDs, the API returns a JSON-formatted error response.
 }
 ```
 
-## DELETE `carts/{id}`
+## DELETE `/carts/{id}`
 
 Simulates the removal of a specific cart by ID.
 
@@ -270,7 +284,7 @@ Simulates the removal of a specific cart by ID.
 curl -X DELETE https://fakestoreapi.com/carts/{id}
 ```
 
-Input a valid `{id}` to make a request:
+Replace `{id}` with a valid cart ID:
 
 ```bash
 curl -X DELETE https://fakestoreapi.com/carts/5
@@ -287,8 +301,16 @@ Response:
   "id":5,
   "userId":3,
   "date":"2020-03-01T00:00:00.000Z",
-  "products":[{"productId":7,"quantity":1},{"productId":8,"quantity":1}],
-  "__v":0
+  "products":[
+    {
+      "productId":7,
+      "quantity":1
+    },
+    {
+      "productId":8,
+      "quantity":1
+    }
+  ]
 }
 ```
 
