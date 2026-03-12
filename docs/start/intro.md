@@ -59,7 +59,7 @@ Represents registered end-users of the e-commerce store.
 
 ## What's next?
 
-- Make your first API call &rarr; [Quickstart guide](Quick%20start.md).
+- Make your first API call &rarr; [Quickstart guide](quickstart.md).
 
 - Understand API responses &rarr; [Concepts guide](../Concept.md)
 

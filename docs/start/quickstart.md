@@ -50,7 +50,7 @@ If successful, the API returns a `200 OK` response with JSON data:
 
 The JSON response contains an array of product objects. Each product includes fields such as `id`, `title`, `price`, and `rating`.
 
-### Usage: Fetching data with JavaScript
+### Usage: Fetching data with JavaScripts
 
 ```javascript
 fetch('https://fakestoreapi.com/products')

@@ -101,7 +101,7 @@ Retrieves a single user by ID.
 
 - **Method:** `GET`
 
-- **Path parameter:** `id` (integers)
+- **Path parameter:** `id` (integer)
 
 #### Request
 
@@ -141,8 +141,7 @@ curl https://fakestoreapi.com/users/2
     "firstname": "david",
     "lastname": "morrison"
   },
-  "phone": "1-570-236-7033",
-  "__v": 0
+  "phone": "1-570-236-7033"
 }
 ```
 
@@ -202,6 +201,8 @@ curl -X POST https://fakestoreapi.com/users \
     "id":1
 }
 ```
+
+The API returns only the generated ID.
 
 ### Edge cases
 
@@ -282,7 +283,7 @@ The API returns an error response when non-integers are placed in the `{id}` fie
 
 ## DELETE `/users/{id}`
 
-Removes users' data from Fake Store Api
+Simulates the removal of a user by ID.
 
 ### Make request
 
@@ -298,7 +299,7 @@ Removes users' data from Fake Store Api
 curl -X DELETE https://fakestoreapi.com/users/{id}
 ```
 
-Input a valid ID to make a request:
+Replace `{id}` with a valid user ID:
 
 ```bash
 curl -X DELETE https://fakestoreapi.com/users/2
@@ -312,34 +313,25 @@ curl -X DELETE https://fakestoreapi.com/users/2
 
 ```json
 {
-  "address":
-  {"geolocation":
-  {"lat":"-37.3159",
-  "long":"81.1496"},
-  "city":"kilcoole",
-  "street":"Lovers Ln",
-  "number":7267,
-  "zipcode":"12926-3874"
+  "address":{
+    "geolocation":{
+      "lat":"-37.3159",
+      "long":"81.1496"
+    },
+    "city":"kilcoole",
+    "street":"Lovers Ln",
+    "number":7267,
+    "zipcode":"12926-3874"
   },
-  
   "id":2,
-  
   "email":"morrison@gmail.com",
-  
   "username":"mor_2314",
-  
   "password":"83r5^_",
-  
-  "name":
-  {
+  "name":{
     "firstname":"david",
     "lastname":"morrison"
   },
-  
-  "phone":"1-570-236-7033",
-  
-  "__v":0
-
+  "phone":"1-570-236-7033"
 }   
 ```
 
@@ -349,7 +341,7 @@ For non-existing integer IDs, the API returns a `200 OK` response and a `null` b
 
 The API returns an error response for non-integer IDs.
 
-- Status: `400 Bad Request`
+- **Status:** `400 Bad Request`
 
 ```json
 {
