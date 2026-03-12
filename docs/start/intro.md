@@ -18,7 +18,7 @@ https://fakestoreapi.com
 
 ## API Resource Model
 
-![Fake Store API resource model](/img/img.png)
+![Fake Store API resource model](../../static/img/img.jpeg)
 
 The Fake Store API is organized around a set of resource models that follow RESTful conventions and represent common e-commerce entities:
 
