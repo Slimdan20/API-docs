@@ -81,7 +81,9 @@ In the code above:
 
 - `await response.json()` converts the received API response into a JavaScript object that can be used in the application.
 
-- `setProducts(data);` Updates and renders product data received from the Fake Store API in the product catalogue page. 
+- `setProducts(data);` Stores the retrieved product data in React state.
+
+At this stage, the catalogue page still appears empty because the fetched product data has not yet been rendered in the UI.
 
 ![catalogue page](../../static/img/img-2.png)
 
@@ -108,6 +110,8 @@ In the code above:
 - `products.map()` iterates through the array of product objects returned by the API.
 
 - The `key` prop helps React efficiently update and render elements in the list.
+
+Your catalogue page now displays a list of products retrieved from the Fake Store API.
 
 ![displayed products](../../static/img/img-1.png)
 
