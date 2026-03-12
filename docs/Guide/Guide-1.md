@@ -79,7 +79,7 @@ In the code above:
 
 - `await fetch("https://fakestoreapi.com/products")` sends a request to the Fake Store API to retrieve a list of products.
 
-- `await response.json()` converts the received API response into a JavaScript object that React can work with.
+- `await response.json()` converts the received API response into a JavaScript object that can be used in the application.
 
 - `setProducts(data);` Updates and renders product data received from the Fake Store API in the product catalogue page. 
 
@@ -119,8 +119,3 @@ You also explored how to make API requests to the Fake Store API and display the
 
 You can review the complete tutorial code on [GitHub](https://github.com/Slimdan20/Product-catalogue).
 
-## Next steps, 
-
-- Add product search
-
-- Add product filtering
