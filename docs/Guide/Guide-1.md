@@ -121,5 +121,5 @@ In this tutorial, you learned how to build a responsive product catalogue page.
 
 You also explored how to make API requests to the Fake Store API and display the returned product data on your catalogue page.
 
-You can review the complete tutorial code on [GitHub](https://github.com/Slimdan20/Product-catalogue).
+You can review the complete tutorial code on [GitHub](https://github.com/Slimdan20/product-catalogue-app).
 
